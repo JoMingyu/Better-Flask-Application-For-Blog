@@ -1,10 +1,10 @@
 from flask import Flask, Response
 
-import api
+from api import index
 
 app = Flask(__name__)
 
-app.add_url_rule('/', 'index', api.index)
+app.add_url_rule('/', 'index', index.index)
 
 
 if __name__ == '__main__':
