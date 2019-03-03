@@ -1,11 +1,10 @@
 from flask import Flask, Response
 
+import api
+
 app = Flask(__name__)
 
-
-@app.route('/')
-def index():
-    return Response('Hello World', mimetype='text/plain')
+app.add_url_rule('/', 'index', api.index)
 
 
 if __name__ == '__main__':
